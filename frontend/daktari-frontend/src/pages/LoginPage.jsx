@@ -1,12 +1,14 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import modelimg from './pages-assets/model.jpg'
 import supportimg from './pages-assets/support.jpg'
 import appointimg from './pages-assets/appoin.jpg'
 import logoimg from './pages-assets/logoproj.png'
+import {AuthContext} from '../context/AuthContext'
 import  './pages-assets/LoginPage.css'
 
 
 function LoginPage(){
+  let {loginUser} = useContext(AuthContext)
   const [bulletActive, setBulletActive] = React.useState([true, false, false])
   const textGroupRef = React.useRef()
   const [inputFocus, setInputFocus] = React.useState(false)
@@ -55,12 +57,6 @@ function LoginPage(){
     })
   }
 
-  function handleLoginSubmit(e){
-    e.preventDefault()
-    console.log(formData)
-
-  }
-
   return (
     <main className={toggle ? "sign-up-mode" : ""}>
 
@@ -69,7 +65,7 @@ function LoginPage(){
         <div className="inner-box">
 
           <div className="forms-wrap">
-            <form onSubmit={handleLoginSubmit} autoComplete="off" className="sign-in-form">
+            <form onSubmit={(e)=>loginUser(e, formData)} autoComplete="off" className="sign-in-form">
               <div className="logo">
                <img src={logoimg} alt="daktari" />
                 <h3>daktari</h3>
