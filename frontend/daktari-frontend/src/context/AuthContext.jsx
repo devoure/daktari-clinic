@@ -32,9 +32,16 @@ export default function AuthProvider(props){
     }
   }
 
+  function logOutUser(){
+    setAuthToken(null)
+    setUser(null)
+    localStorage.removeItem('authToken')
+  }
+
   let contextData = {
     user:user,
-    loginUser:loginUser
+    loginUser:loginUser,
+    logOutUser:logOutUser
   }
   return(
     <AuthContext.Provider value = {contextData}>
