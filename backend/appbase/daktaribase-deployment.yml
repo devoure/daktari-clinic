@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: daktaripred
+  labels:
+    app: daktaripred
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: daktaripred
+  template:
+    metadata:
+      labels:
+        app: daktaripred
+    spec:
+      containers:
+        - args:
+          - sh
+          - -c
+          - python manage.py runserver 0.0.0.0:8000
+          env:
+            - name: DEBUG
+              value: "1"
+            - name: ALLOWED_HOSTS
+              value: "192.168.49.2"
+          image: devourey/daktaribase:latest
+          name: daktaripred
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8000
+              name: wsgi

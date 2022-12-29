@@ -1,0 +1,45 @@
+#connection to the api kind
+apiVersion: apps/v1
+#Specify the component
+kind: Deployment
+metadata:
+  #name and label of our deployment
+  name: daktari-ui
+  labels:
+    app: daktari-ui
+spec:
+  #we will have one 1 replica only
+  replicas: 1
+  selector:
+    #describe info to connect a deployment to a pod
+    matchLabels:
+      app: daktari-ui
+  #describe the configuration of the pod
+  template:
+    metadata:
+      labels:
+        #connection to this pod to the deployment
+        app: daktari-ui
+    spec:
+      containers:
+        - image: devourey/daktari-ui:latest
+          name: daktari-ui
+          ports:
+            - containerPort: 5173
+              name: wsgi
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: daktari-ui
+  labels:
+    app: daktari-ui
+spec:
+  type: NodePort
+  selector:
+    app: daktari-ui
+  ports:
+    - port: 5173
+      name: "5173"
+      targetPort: 5173

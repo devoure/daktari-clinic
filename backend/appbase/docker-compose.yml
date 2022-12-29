@@ -1,0 +1,20 @@
+#version of docker compose
+version: '3.7'
+
+
+services:
+  app:
+    build:
+      #use Dockerfile created to create this app service
+      context: .
+    ports:
+      #port mapping from the machine to the conatainer to be accessed
+      - "8000:8000"
+    volumes:
+      #data persistence to update our project code base to the container
+      - ./daktari_backend:/app
+    #for local develoment to run the django app on our local machine localhost
+    command: sh -c "python manage.py runserver 0.0.0.0:8000"
+    environment:
+      #set app in debug mode
+      - DEBUG=1

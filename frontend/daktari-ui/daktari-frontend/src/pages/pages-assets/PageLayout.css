@@ -1,0 +1,1733 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,700&display=swap');
+
+*, *::before, *::after{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body, input{
+  font-family: Roboto;
+}
+
+/** Dashboard css **/
+.dashboard{
+  background-color: #E39695;
+  width:100vw;
+  height:100vh;
+}
+
+
+/**       1   Dashboard Navigation Section    1          **/
+.nav-section{
+  position: fixed;
+  z-index: 1;
+  background-color: #FF9494;
+  left:0;
+  width: 25%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-x: hidden;
+}
+
+/**       1.1   Dashboard Nav Header Section   1.1            **/
+
+.nav-section-header{
+  height:10%;
+  width: 100%;
+  margin-left:10%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid .1rem #FFD1D1;
+}
+
+/**       1.1.1     Header Pic        1.1.1                      **/
+.nav-header-pic{
+  height:100%;
+  width: 20%;
+  overflow: hidden;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.nav-header-pic-img{
+  max-height:80%;
+  max-width: 80%;
+  object-fit: cover;
+  object-position: cover;
+  
+}
+.nav-header-pic img{
+  flex-shrink: 0;
+}
+/** -------------- 1.1.1 -------- End ----------- 1.1.1 --------- **/
+
+/**       1.1.2     Header Info         1.1.2                      **/
+.nav-header-info{
+  height: 100%;
+  width:70%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.nav-header-info h1{
+  font-weight: 500;
+  font-size: 1.8rem;
+}
+
+/** -------------- 1.1.2 -------- End ----------- 1.1.2 --------- **/
+
+/** --------------- 1.1 ----------End------------ 1.1 ---------- **/                 
+
+/**         1.2  Dashboard   Nav Body Section     1.2 ----------   **/
+
+.nav-section-body{
+  height:60%;
+  width:100%;
+  margin-left: 10%;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-section-body a{
+  text-decoration: none;
+}
+
+/**             1.2.1 Naigation Body List       1.2.1                 **/
+
+.nav-body-list{
+  height: 25%;
+  width: 90%; 
+  display:flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.nav-body-list:hover{
+  background-color: #FFF5E4;
+  border-top-left-radius: 1.5rem;
+  border-bottom-left-radius: 1.5rem;
+}
+
+.nav-body-list:hover .nav-body-pic ion-icon{
+  color:black;
+}
+
+.nav-body-list:hover .nav-body-info span{
+  color:black;
+  
+}
+
+.nav-body-list:hover::before{
+  content: "";
+  background: transparent;
+  height:50px;
+  width: 50px;
+  position: absolute;
+  top:-50px;
+  right: 0;
+  border-radius:50%;
+  box-shadow: 35px 35px 0 10px #FFF5E4;
+  pointer-events: none;
+}
+
+.nav-body-list:hover::after{
+  content: "";
+  height:50px;
+  width: 50px;
+  position: absolute;
+  bottom:-50px;
+  background: transparent;
+  right:0;
+  border-radius:50%;
+  box-shadow: 35px -35px 0 10px #FFF5E4;
+  border: none;
+  pointer-events: none;
+}
+
+.nav-body-pic{
+  height: 100%;
+  width:20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-body-pic ion-icon{
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center;
+  font-size: 2rem;
+  color:black;
+}
+.nav-body-info{
+  height: 100%;
+  width:70%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.nav-body-info span{
+  color: #FFF5E4;
+  font-size:1.2rem;
+  font-weight: 600;
+  transition: .3s;
+}
+/** ------------1.2.1 -------- End ------------- 1.2.1 -------------- **/
+/** -----------------1.2  --------End------------- 1.2 -----------   **/
+
+/**                   1.3  Nav Footer Section  1.3                   **/
+
+.nav-section-footer{
+  width:80%;
+  height:10%;
+  margin-left:10%;
+  display:flex;
+  justify-content:space-between;
+  margin-bottom: 10%;
+  background-color: #FFD1D1;
+  border-radius: 1rem;
+}
+
+.footer-header-pic{
+  height: 100%;
+  width:20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-header-pic ion-icon{
+   max-height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center;
+  font-size: 2rem;
+  color:black;
+}
+
+.footer-header-info{
+  height: 100%;
+  width:70%;
+  display: flex;
+  align-items: center;
+  transition: .8s;
+}
+
+.nav-section-footer:hover{
+  background-color:#FFF5E4;
+}
+.nav-section-footer:hover .footer-header-info{
+  padding-left: 2rem; 
+}
+
+.footer-header-info span{
+  font-size:1.2rem;
+  font-weight: 400;
+}
+/** ------------------  1.3   --------- End -------- 1.3 ------------- **/
+
+
+/** ----- 1   End of Dashboard Nav Section 1 ------------ **/
+
+
+
+/**        2  Dashboard Content Section     2               **/
+.content-section{
+  position: absolute;
+  left:25%;
+  z-index:2;
+  background-color: #FFF5E4;
+  width: 75%;
+  height: 100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  transition: .8s;
+}
+
+.content-section.nav-toggle{
+  left:8%;
+  width:92%;
+}
+
+/**         2.1 Content Header Section      2.1                  **/
+
+.content-header{
+  background-color: #FFD1D1;
+  height: 10%;
+  width:100%;
+  display:flex;
+  justify-content: space-between;
+}
+
+.header-left{
+  height:100%;
+  width:10%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  transition:.8s;
+}
+
+.header-left ion-icon{
+  font-size: 2rem;
+  transition:.8s;
+  
+}
+
+.header-left ion-icon:hover{
+  font-size: 2.5rem;
+  color:#FF9494;
+}
+
+.header-left ion-icon.clicked{
+  transform: rotate(180deg);
+} 
+
+.header-left:hover{
+  background-color: #FFF5E4;
+}
+
+.header-right{
+  height: 100%;
+  width: 30%;
+  display:flex;
+  justify-content: end;
+  padding-right: 2rem;
+  transition: .8s
+}
+
+.header-right .right-pic{
+  background-color: white;
+  height: 3rem;
+  width: 3rem;
+  overflow:hidden;
+  margin-top:.4rem;
+  border-radius: 50%;
+  transition: .3s;
+}
+
+.header-right:hover{
+  background-color: #FFF5E4;
+}
+.header-right .right-pic:hover{
+  border: solid .2rem #FF9494;
+}
+
+.header-right.header-right-active{
+  background-color: #FFF5E4;
+}
+.header-right .right-pic.right-pic-active{
+  border: solid .2rem #FF9494;
+}
+
+.header-right .right-pic img{
+  max-height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.header-right .right-text{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 2rem;
+}
+/** ------  2.1   End of Content Header      2.1  --------------  **/
+
+/**         2.2 Content   Body    Section     2.2                  **/
+.content-body{
+  background-color: #FFF5E4;
+  width:100%;
+  height:80%;
+  position: relative;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.chat{
+  height:90%;
+}
+.profile-edit{
+  z-index: 2;
+  position: absolute;
+  width:40%;
+  height: 80%;
+  background-color: #FFF5E4;
+  right:0;
+  top:0;
+  border-bottom-left-radius: .4rem;
+  box-shadow: -4px 4px 8px 0px rgba(0, 0, 0, .5);
+  display:flex;
+  flex-direction:column;
+  visibility: hidden;
+  transition: .2s;
+}
+
+.profile-edit.active-profile-edit{
+  visibility: visible;
+}
+.edit-header{
+  display: flex;
+  height: 10%;
+  width:100%;
+  margin-bottom:1rem;
+}
+.edit-image img{
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+}
+
+.edit-header-close{
+  height: 100%;
+  width:15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.edit-header-close ion-icon{
+  font-size: 2rem;
+}
+.edit-header-title{
+  width:70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size:1.2rem;
+  font-weight: 600;
+  background-color: #FFD1D1;
+  border-radius: .2rem;
+  padding:0 .5rem;
+}
+
+.edit-header-save{
+  width: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding-right:.4rem;
+}
+.edit-header-save span{
+  background-color: black;
+  padding:.4rem;
+  color:#FFF5E4;
+  border-radius: 1rem
+}
+
+.edit-image{
+  height: 35%;
+}
+
+.edit-image-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.edit-image ion-icon{
+  position: absolute;
+  background-color: rgba(0,0,0,.5);
+  padding:.5rem;
+  color:#FFF5E4;
+  border-radius: 50%;
+}
+.edit-image ion-icon:hover{
+  background-color: black;
+}
+.edit-username{
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  padding:0 2rem;
+}
+
+.edit-username label{
+  margin-bottom:.5rem;
+}
+
+.edit-username input{
+  height: 40%;
+  border-radius: .3rem;
+  border:solid .1rem;
+  background-color: #FFF5E4;
+}
+.edit-email{
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem;
+}
+
+.edit-email label{
+  margin-bottom: .5rem;
+}
+
+.edit-email input{
+  height: 40%;
+  border-radius: .3rem;
+  border: solid .1rem;
+  background-color: #FFF5E4;
+}
+
+.dashboard-box{
+  z-index: 1;
+  width:80%;
+  height:80%;
+  border-radius: 1rem;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  overflow: hidden;
+  position: relative;
+  transition: .8s ease-in-out;
+  border-radius: 2rem;
+  box-shadow: 5px 5px 20px 10px rgba(0,0,0,.25);
+}
+
+.chat-content{
+  height:90%;
+  width:90%;
+  border-radius:1rem;
+}
+
+.dashboard-box-pics{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+.image{
+  object-fit: cover;
+  object-position: center;
+  width:100%;
+  height: 100%;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.5s;
+}
+.img-1{
+  transform: translate(0, -50px)
+}
+.img-2{
+  transform: scale(0.4, 0.5)
+}
+.img-3{
+  transform: scale(0.3) rotate(-20deg);
+}
+.image.show{
+  opacity:1;
+  transform: none;
+}
+
+.dashboard-box-text{
+  position: absolute;
+  height: 100%;
+  width:50%;
+  background-color: rgba(0,0,0,.4);
+  right:0;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+
+.box-text-header{
+  width:100%;
+  height:20%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+@keyframes text-anims{
+  0% {transform:translateY(-.5rem); opacity:0}
+  25% {opacity:.25}
+  50% {transform:translateY(1rem); opacity:5}
+  100% {transform:translateY(0); opacity:1}
+}
+.text-anims{
+  animation-name: text-anims;
+  animation-duration:3s;
+}
+.header-list-cont{
+  overflow:hidden;
+}
+.box-text-header-list{
+  display: flex;
+  flex-direction: column;
+  max-height: 2.2rem;
+  transform:translateY(0);
+  transition:0.5s;
+}
+.box-text-header span{
+  line-height: 2.2rem;
+  color:#FFF5E4;
+  font-size:1.4rem;
+  font-weight: 400;
+}
+
+.box-text-body{
+  width:100%;
+  height:40%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.body-list-cont{
+  overflow:hidden;
+}
+.box-text-body-list{
+  display: flex;
+  flex-direction: column;
+  height: 9.0rem;
+  transform: translateY(0);
+  padding:0 2rem;
+}
+.box-text-body-list span{
+  height:6.0rem;
+  color:#FFF5E4;
+  font-size:1.2rem;
+  font-weight: 400;
+}
+.box-text-footer{
+  width:100%;
+  height:20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-footer-expl{
+  background-color: #FF9494;
+  color:#FFF5E4;
+  padding:.8rem;
+  border-radius: 1rem;
+}
+/** ------  2.2   End of   Body  Section      2.2  --------------  **/
+
+/**         2.3 Content   Footer   Section      2.3                  **/
+
+
+/** ----------  2.3   End of Content Footer      2.3  --------------  **/
+.content-footer{
+  background-color: #FFD1D1;
+  width: 100%;
+  height:10%;
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+}
+.content-footer span{
+  width:3rem;
+  height:3rem;
+  border-radius:50%;
+  background-color: transparent;
+  border:solid .2rem;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  transition:.5s;
+}
+.content-footer span ion-icon{
+  pointer-events:none;
+  font-size:1.5rem;
+}
+.content-footer span.bullet-active{
+  background-color:#FFF5E4;
+  border: solid .3rem #FF9494;
+}
+/** ----   2  End of Dashboard Content Section  2    ------------ **/
+
+/** ---------------- Booking Service ---------------------------- **/
+
+.book{
+  height:90%;
+}
+.booking-service{
+  border-radius:1rem;
+  height:95%;
+  width:95%;
+  background-image:url(../pages-assets/background-book.jpg);
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:cover;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.book-box{
+  height:95%;
+  width:90%;
+  border:1px solid #FFF5E4;
+  border-radius:.5rem;
+  background:rgba(255, 209, 209, 0.2);
+  box-shadow:0 4px 30px rgba(0,0,0,0.1);
+  backdrop-filter:blur(5px);
+
+}
+/** ---------------  Search   Div    ---------------------------- **/
+.patbook-search{
+  width:100%;
+  height:10%;
+  background-color:transparent;
+  display:flex;
+  justify-content:space-evenly;
+  align-items:center;
+}
+.search-bar{
+  display:flex;
+  width:100%;
+  justify-content:center;
+  align-items:center;
+}
+.search-bar input[type=text]{
+  font-size:1.2rem;
+  padding:.4rem 1rem;
+  border:1px solid #FFD1D1;
+  border-radius:1rem;
+  box-shadow: 1px 1px 5px 2px rgba(0,0,0,.25);
+  background-color:transparent;
+  display:block;
+  margin-right:1rem;
+}
+.search-gif{
+  overflow:hidden;
+  transition:.3s;
+}
+.search-gif img{
+  width:5rem;
+  height:5rem;
+}
+
+.search-bar button{
+  margin:1rem;
+  height:2.4rem;
+  width:2.6rem;
+  border:1px solid #FFD1D1;
+  background-color:transparent;
+  border-radius:50%;
+  box-shadow: 1px 1px 5px 2px rgba(0,0,0,.25);
+  transition:.6s;
+}
+.search-bar button:hover{
+  border:1px solid #FF9494;
+  background-color:#FF9494;
+  transform: scale(1.1,1.1) rotate(360deg);
+}
+.search-bar ion-icon{
+  font-size:1.2rem;
+}
+
+.search-all span{
+  background-color:transparent;
+  border:1px solid #FFD1D1;
+  padding: .4rem 1rem;
+  font-size:1.2rem;
+  border-radius:1rem;
+  box-shadow: 1px 1px 5px 2px rgba(0,0,0,.25);
+  transition:.6s;
+  user-select:none;
+}
+
+.search-all span:hover{
+  background-color:#FF9494;
+  border:solid 1px #FF9494;
+}
+.booking-num{
+  padding:.4rem;
+  border-radius:10px;
+  border:2px solid #FFF5E4;
+  margin-left:20px;
+  display:flex;
+}
+.booking-num span{
+  background-color:black;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:25px;
+  color:#FFF5E4;
+  border-radius:50%;
+  margin-right:5px;
+  border:2px solid #FFF5E4;
+}
+/** -------------- End Search Div    ---------------------------- **/
+.booking-list{
+  background-color:transparent;
+  height:50%;
+  width:100%;
+  display:flex;
+}
+.booking-list-detail{
+  height:100%;
+  width:80%;
+  display:flex;
+  align-items:center;
+  justify-content:space-around;
+  flex-wrap:nowrap;
+  overflow:hidden;
+}
+.list-scroll-left{
+  height:100%;
+  width:10%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.list-scroll-right ion-icon{
+  font-size: 2rem;
+}
+.list-scroll-left ion-icon{
+  font-size: 2rem;
+}
+.list-scroll-right{
+  height:100%;
+  width:10%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+}
+.sched-card{
+  border: solid 2px #FFF5E4;
+  border-radius:20px;
+  height:60%;
+  width:28%;
+  display:flex;
+  flex-direction:column;
+  margin-right:10px;
+  overflow:hidden;
+  flex-shrink:0;
+  transition:.3s;
+}
+.sched-card:hover .sched-card-detail{
+  visibility:hidden;
+}
+.sched-card:hover .sched-card-date-picker{
+  display: initial;
+  display:flex;
+}
+.sched-card:hover {
+  height:80%;
+}
+.sched-card:hover .sched-card-image{
+  height:70%
+}
+.sched-card-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.sched-card-image{
+  width:100%;
+  height: 100%;
+  background-color:black;
+  position:relative;
+  transition:.3s;
+}
+.sched-card-detail{
+  display:flex;
+  flex-direction:column;
+  position:absolute;
+  width:100%;
+  top:0;
+  padding:60px 0;
+  background-color:rgba(0,0,0,.6);
+  color:#E8E8E8;
+  height:60%;
+  justify-content:center;
+  transition:.1s;
+}
+.sched-card-detail div{
+  display:flex;
+}
+.sched-card-detail div span{
+  font-size:1rem;
+  text-align:center;
+  padding:10px 0 0 10px;
+}
+.sched-card-detail div ion-icon{
+  font-size:1.4rem;
+}
+.sched-card-date-picker{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:30%;
+  padding-left:10px;
+  display:none;
+  transition:.3s;
+}
+.schedule-sum{
+  width:100%;
+  height:30%;
+  display:flex;
+  justify-content:start;
+  flex-direction:column;
+  align-items:center;
+}
+.schedule-sum-header{
+  width:80%;
+  height:30%;
+  border:2px solid #FFF5E4;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  border-radius:10px;
+}
+.schedule-sum-list{
+  display:flex;
+  width:80%;
+  height:70%;
+}
+.schedule-sum-card{
+  display:flex;
+  flex-direction:column;
+  background-color:rgba(0,0,0,.4);
+  border: 2px solid #FFF5E4;
+  border-radius:20px;
+  height:90%;
+  margin-top:10px;
+  width:30%;
+  justify-content:center;
+  align-items:center;
+  position:relative;
+}
+.card-tag{
+  position:absolute;
+  top:-20px;
+}
+.card-tag ion-icon{
+  font-size:2rem;
+}
+/** ---------------  Book   Div    ---------------------------- **/
+.patbook-book{
+  width:100%;
+  height:50%;
+  display:flex;
+  justify-content:space-around;
+}
+.book-doctor{
+  height:100%;
+  width:56%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  position:relative;
+  overflow-x:hidden;
+}
+.blur-slider-left{
+  background-color:transparent;
+  position:absolute;
+  left:2rem;
+  filter:blur(30px);
+  height:90%;
+  width:30px;
+}
+/*.blur-slider-right{
+  background-color:transparent;
+  position:absolute;
+  right:0;
+ /* filter:blur(20px);
+  height:90%;
+  width:1px;
+  border:none;
+  box-shadow:-70px 0 60px 10px black;
+}*/
+.slider-left {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  height:100%;
+  width:5%;
+}
+.slider-left span{
+  height:2rem;
+  width:2rem;
+  border-radius:50%;
+  background-color:transparent;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  left:1rem;
+  top:50%;
+  transform: translateY(-50%);
+  box-shadow: 1px 1px 5px 2px rgba(0,0,0,.25);
+  border:1px solid #FFD1D1;
+  transition:.6s;
+}
+.slider-left ion-icon{
+pointer-events:none;
+}
+.slider-left span:hover{
+  width:3rem;
+  border-radius:1rem;
+  justify-content:start;
+  background-color:#FF9494;
+}
+.slider-right{
+  width:5%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.slider-right span{
+  height:2rem;
+  width:2rem;
+  border-radius:50%;
+  background-color:transparent;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  right:1.5rem;
+  top:50%;
+  transform: translateY(-50%);
+  box-shadow: 1px 1px 5px 2px rgba(0,0,0,.25);
+  border:1px solid #FFD1D1;
+  transition:.6s;
+}
+.slider-right ion-icon{
+pointer-events:none;
+}
+.slider-right span:hover{
+  width:3rem;
+  border-radius:1rem;
+  justify-content:end;
+  background-color:#FF9494;
+}
+
+.book-schedule{
+  height:95%;
+  width:30%;
+  background-color:transparent;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.doctors{
+  height:90%;
+  width:100%;
+  display:flex;
+  padding-left:3rem;
+  padding-right:2.2rem;
+  background-color:transparent;
+  flex-wrap: nowrap;
+  /*overflow-x:scroll;*/
+  transition: .30s;
+}
+ /* Hide scrollbar for Chrome, Safari and Opera */
+.doctors::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.doctors {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+} 
+.doctor-box:nth-child(3){
+}
+.doctor-box{
+  flex-shrink:0;
+  background-color:transparent;
+  height:95%;
+  width:40%;
+  border-radius:.5rem;
+  display:flex;
+  flex-direction:column;
+  border:1px solid #FFD1D1;
+  margin-right:1rem;
+  box-shadow: 1px 1px 5px 2px rgba(0,0,0,.25);
+  overflow-y:hidden;
+  transition:.3s;
+/*  transform:translateX(0); */
+}
+.doctor-box-blur{
+  filter: blur(0px);
+}
+.doctor-box-pic{
+  height:55%;
+}
+.doctor-box-pic img{
+  height:100%;
+  width:100%;
+  object-position:center;
+  object-fit:cover;
+}
+.doctor-box-info{
+  transform:translateY(48%);
+  height:45%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:space-evenly;
+  user-select:none;
+  transition:.6s;
+}
+.doctor-box:hover .doctor-box-info{
+  transform:translateY(0);
+}
+
+.doctor-box-info .info-book{
+  display:none;
+  transition:.3s;
+}
+.booked{
+  background-color:#008D3C;
+  padding:.4rem .8rem;
+  color:#FFF5E4;
+}
+.inactive{
+  opacity:.5;
+  pointer-events:none;
+}
+.unbook{
+  background-color:#FF1C1C;
+  color:#FFF5E4;
+}
+.info-book-button{
+  padding:.5rem;
+  border:2px solid #FFF5E4;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  border-radius:50%;
+  position:relative;
+  transition:.3s;
+}
+.info-book-button:hover .info-book{
+  display:initial;
+  padding-left:.5rem;
+}
+.info-book-button:hover{
+  border-radius:2px;
+}
+.info-book-button:hover .info-book-icon{
+  transform:rotate(360deg)
+}
+
+.info-book-icon{
+  height:1rem;
+  width:1rem;
+  transition:.5s;
+}
+.info-book-icon ion-icon{
+  color:#FFF5E4;
+  transition:.5s;
+}
+.doctor-box-info .booked:hover{
+  background-color:#006029;
+  color:#FFF5E4;
+}
+.doctor-box-info .unbook:hover{
+  background-color: #DB1515;
+  color:#FFF5E4;
+}
+.doctor-box-info .info-username{
+  font-size:1.2rem;
+  font-weight:bold;
+}
+.doctor-box-info .info-status{
+  font-size:1rem;
+  font-style:italic;
+}
+.date-schedule{
+  height:55%;
+  width:100%;
+  display:flex;
+}
+.date-schedule-date{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:space-evenly;
+}
+.date-schedule-time{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:space-evenly;
+}
+.time-icon ion-icon{
+  font-size:3rem;
+}
+.date-icon ion-icon{
+  font-size:3rem;
+}
+.date-month{
+  font-size:1.3rem;
+  font-weight:bold;
+}
+.date-day{
+  font-size:1.3rem;
+  font-style:italic;
+}
+.time-hours{
+  font-size:1.3rem;
+  font-weight:bold;
+}
+.time-type{
+  font-size:1.3rem;
+  font-style:italic;
+}
+.schedule-title{
+  margin-bottom:.2rem;
+  height:20%;
+  width:100%;
+  font-size:1.1rem;
+  font-weight:bold;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background-color:transparent;
+  box-shadow: 1px 1px 5px 2px rgba(0,0,0,.25);
+}
+.schedule-cont{
+  height:90%;
+  width:90%;
+  background-color:transparent;
+  border-radius:0rem;
+  overflow:hidden;
+  box-shadow: 1px 1px 5px 2px rgba(0,0,0,.25);
+  border:1px solid #FFD1D1;
+}
+.schedule-time{
+  height:55%;
+  display:flex;
+  flex-direction:column;
+  width:100%;
+}
+.time-date{
+  height:70%;
+  display:flex;
+}
+.date-detail{
+  width:70%;
+}
+.time-time{
+  height:20%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:0 1rem;
+}
+.time-detail{
+  font-size:1.2rem;
+}
+.doc-pic img{
+  height:40px;
+  width:40px;
+  border-radius:50%;
+  object-fit:cover;
+}
+.schedule-doc{
+  display:flex;
+  padding:0 1rem;
+  justify-content:space-between;
+  align-items:center;
+  height:25%;
+  background-color:transparent; 
+  box-shadow: 1px 1px 5px 2px rgba(0,0,0,.25);
+
+}
+.doc-name{
+  font-weight:bold;
+  font-size:1.2rem;
+}
+/** -------------- End Book Div    ---------------------------- **/
+
+/** ---------------  Summary   Div    ---------------------------- **/
+.patbook-summary{
+  width:100%;
+  height:40%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.summary{
+  width:90%;
+  height:80%;
+  background-color:transparent;
+  border-radius:0rem;
+  overflow:hidden;
+  box-shadow: 1px 1px 5px 2px rgba(0,0,0,.25);
+}
+.summary-title{
+  width:100%;
+  height:30%;
+  background-color:transparent;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:.5rem;
+  box-shadow: 1px 1px 5px 2px rgba(0,0,0,.25);
+}
+.no-booking{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+.no-booking span ion-icon{
+  font-size: 2rem;
+}
+.summary-title span{
+  font-size:1.2rem;
+  font-weight:bold;
+}
+.summary-title-count{
+  margin-left:1rem;
+  background-color:transparent;
+  padding:1rem;
+  height:1rem;
+  width:1rem;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow: 1px 1px 5px 2px rgba(0,0,0,.25);
+  border:1px solid #FFD1D1;
+  font-style:italic;
+}
+.summary-details{
+  display:flex;
+  justify-content:space-evenly;
+}
+.summary-details span{
+  padding:.3rem;
+  background-color:rgba(255, 148, 148, .2);
+  box-shadow: 1px 1px 5px 2px rgba(0,0,0,.25);
+  border-radius:.5rem;
+  width:20%;
+  display:flex;
+  justify-content:center;
+}
+.summary-list{
+  display:flex;
+  justify-content:space-evenly;
+  margin-top:.5rem;
+}
+.summary-list span{
+  width:20%;
+  display:flex;
+  justify-content:center;
+
+}
+/** -------------- End Summary Div    ---------------------------- **/
+
+/** ------------ End Booking Service ---------------------------- **/
+.chat-service{
+  border-radius:1rem;
+  height:95%;
+  width:95%;
+  background-image:url(../pages-assets/cancersupport.jpg);
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:cover;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.chat-box{
+  height:95%;
+  width:95%;
+  border:1px solid #FFF5E4;
+  border-radius:.5rem;
+  background:rgba(255, 209, 209, 0.2);
+  box-shadow:0 4px 30px rgba(0,0,0,0.1);
+  backdrop-filter:blur(5px);
+}
+
+.chat-header{
+  background-color:transparent;
+  height: 10%;
+  display:flex;
+  flex-direction:center;
+  justify-content:center;
+}
+.chat-header-text{
+  font-size:1.4rem;
+  background-color:transparent;
+  display:flex;
+  align-items:center;
+  font-weight:bold;
+  padding: 0 10px;
+  border:2px solid #FFF5E4;
+  color:white;
+}
+.chat-header-icon{
+  background-color:#FFF5E4;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.chat-header-icon ion-icon{
+  color:black;
+  font-size:1.4rem;
+  padding: 0 20px;
+}
+.chat-video-feed{
+  height:60%;
+  width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:space-around;
+}
+.video-feed-me{
+  width: 40%;
+  height:80%;
+  background-color:transparent;
+  border-radius:10px;
+  border: 2px solid #FFF5E4;
+  overflow:hidden;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.video-feed-other{
+  width: 40%;
+  height:80%;
+  background-color:transparent;
+  border-radius:10px;
+  border: 2px solid #FFF5E4;
+  overflow:hidden;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+}
+.video-feed-username{
+  background-color:red;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:25%;
+  height:20%;
+  color:#FFF5E4;
+  background-color:rgba(0,0,0,.6);
+  border:2px solid #FFF5E4;
+  border-radius:10px;
+  position:absolute;
+  top:0;
+  left:0;
+}
+
+.pred-service{
+  border-radius:1rem;
+  height:95%;
+  width:95%;
+  background-image:url(../pages-assets/fight.jpg);
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:cover;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.pred-box{
+  height:95%;
+  width:95%;
+  border:1px solid #FFF5E4;
+  border-radius:.5rem;
+  background:rgba(255, 209, 209, 0.2);
+  box-shadow:0 4px 30px rgba(0,0,0,0.1);
+  backdrop-filter:blur(5px);
+  display:flex;
+  flex-direction:column;
+}
+.pred-box-upper{
+  width:100%;
+  height:50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.pred-box-lower{
+  width:100%;
+  height:50%;
+  display:flex;
+  align-items:center;
+  padding-left:100px;
+}
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+.upper-content-box {
+  width:25%;
+  height:80%;
+  background-color:rgba(0,0,0,.3);
+  margin-right:10px;
+  display:flex;
+  flex-direction:column;
+}
+.step-show{
+  background-color:rgba(0,0,0,.5);
+  height:30%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.step-show .step{
+  font-size:1.3rem;
+  font-weight:bold;
+  color:#FFF5E4;
+  margin-right:5px;
+}
+.step-show .number{
+  background-color:#FFF5E4;
+  width:30px;
+  height:30px;
+  border-radius:50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-weight:bold;
+}
+
+.step-name{
+  height:15%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.step-content{
+  height:30%;
+  position:relative;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  overflow:hidden;
+}
+.step-content input{
+  display:none;
+}
+.step-content:hover input{
+  display:initial;
+}
+.step-content:hover .upload-icon{
+  display:none;
+}
+.step-content:hover .patient-select{
+  display:initial;
+}
+.step-content:hover .predict{
+  display:initial;
+}
+.upload-label input[type="file"] {
+  position: absolute;
+  top: -1000px;
+}
+.upload-icon{
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  background-color:#FFF5E4;
+  display:flex;
+  flex-direction:center;
+  justify-content:center;
+  transition:.3s;
+}
+.upload-icon ion-icon{
+  font-size:2.2rem;
+}
+.upload-label{
+  top:-30px;
+  cursor: pointer;
+  border: 1px solid #FFF5E4;
+  color:black;
+  font-size:.9rem;
+  padding:15px 15px;
+  margin: 5px;
+  display: inline-block;
+  transition:.3s;
+}
+.patient-select input[type="text"]{
+  line-height:30px;
+  border:1px solid #FFF5E4;
+  background-color:transparent;
+  border-radius:5px;
+}
+.patient-select{
+  display:none;
+}
+.step-footer{
+  height:25%;
+  background-color:rgba(0,0,0,.5);
+  display:flex;
+  align-items:center;
+  padding-left:10px;
+}
+
+.step-footer-pic img{
+  width:30px;
+  height:30px;
+  border-radius:50%;
+  object-fit:cover;
+}
+.step-footer-name{
+  margin-left:10px;
+  font-size:20px;
+  color:#FFF5E4;
+}
+.step-content .predict{
+  padding:10px;
+  border:1px solid #FFF5E4;
+  display:none;
+  transition:.3s;
+}
+.step-content .predict:hover{
+  background-color:#FFF5E4;
+  border:1px solid black;
+  color:black;
+  cursor:pointer;
+}
+.result-box{
+  height:80%;
+  width:25%;
+  background-color:rgba(0,0,0,.5);
+  position:relative;
+}
+.pred-image{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  overflow:hidden;
+}
+.pred-image img{
+  width:100%;
+  height:100%;
+}
+.pred-result{
+  position:absolute;
+  top:-20px;
+  right:-50px;
+  height:20%;
+  background-color:#FFF5E4;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding: 0 10px;
+  border:1px solid black;
+  border-radius:20px;
+}
+.pred-result span{
+  font-weight:bold;
+}
+.join-chat{
+  background-color:rgba(255, 245, 228, .9);
+  height:65%;
+  width:60%;
+  margin-top:50px;
+  margin-left:180px;
+  border-radius:50px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:space-evenly;
+}
+.join-header{
+  width:90px;
+  height:90px;
+  border-radius:10px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.join-header ion-icon{
+  font-size:5rem;
+}
+.join-prompt{
+  width:100%;
+  height:60px;
+  background-color:transparent;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.join-prompt span{
+  font-weight:bold;
+  font-size:1.3rem;
+}
+.join-input{
+  height:60px;
+  width:100%;
+  display:flex;
+  justify-content:center;
+}
+.join-input input{
+  height:70%;
+  width:60%;
+  border-radius:10px;
+  background-color:#FF9494;
+}
+.join-button{
+  height:50px;
+  width:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.join-button span{
+  background-color:#FF9494;
+  height:100%;
+  width:30%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-weight:bold;
+  border-radius:10px;
+  cursor:pointer;
+}
+.join-button span:hover{
+  background-color:black;
+  color:#FF9494;
+}
+.video-profile{
+  background-color:black;
+  height:120px;
+  width:120px;
+  border-radius:50%;
+  position:relative;
+}
+.video-profile .profile-icon{
+  background-color:white;
+  height:60px;
+  width:60px;
+  border-radius:50%;
+  position:absolute;
+  bottom:-10px;
+  right:0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  overflow:hidden;
+}
+.video-profile .profile-icon ion-icon{
+  font-size:1.4rem;
+}
+.video-profile-pic{
+  width:100%;
+  height:100%;
+  overflow:hidden;
+  border-radius:50%;
+}
+.video-profile-pic img{
+  height:100%;
+  width:100%;
+}

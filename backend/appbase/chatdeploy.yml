@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: daktari-chat
+  labels:
+    app: daktari-chat
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: daktari-chat
+  template:
+    metadata:
+      labels:
+        app: daktari-chat
+    spec:
+      containers:
+        - args:
+          - sh
+          - -c
+          - python manage.py runserver 0.0.0.0:8000
+          env:
+            - name: DEBUG
+              value: "1"
+            - name: ALLOWED_HOSTS
+              value: "192.168.49.2"
+          image: devourey/daktaribase:latest
+          name: daktari-chat
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8000
+              name: wsgi
